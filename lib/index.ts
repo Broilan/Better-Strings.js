@@ -17,10 +17,6 @@ String.prototype.isPalindrome = function() {
     return this.split(' ').join('').reverse() === this.split(' ').join('');
 }
 
-String.prototype.toTitleCase = function() {
-    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
-}
-
 String.prototype.toCamelCase = function() {
     return this.split('').map((letter, i) => i !== 0 && this[i-1] === ' ' ? letter.toUpperCase() : letter).join('');
 }
@@ -29,6 +25,19 @@ String.prototype.toSnakeCase = function() {
     return this.split('').map(l => !alphabet.has(l) && !nums.has(l) ? '_' : l).join('');
 }
 
+String.prototype.toKebabCase = function() {
+    return this.split('').map(l => !alphabet.has(l) && !nums.has(l) ? '-' : l).join('');
+}
+
+String.prototype.toPascalCase = function() {
+    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('');
+}
+
+String.prototype.toTrainCase = function() {
+    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('-');
+}
+
+
 
 
 
@@ -36,5 +45,5 @@ String.prototype.toSnakeCase = function() {
 let testStr = 'hi my name is xyzabc123'
 let testStr2 = 'racecar'
 
-console.log(testStr.toSnakeCase());
+console.log(testStr.toKebabCase());
 testStr;
