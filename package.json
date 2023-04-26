@@ -2,7 +2,7 @@
   "Author": "Tanner Eschmann",
   "name": "@broilan/better-strings",
   "private": false,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "type": "module",
   "description": "Library of string methods",
   "license": "MIT",
