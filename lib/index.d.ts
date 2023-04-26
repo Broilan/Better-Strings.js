@@ -12,6 +12,14 @@ declare global {
         reverseWords(): String;
         escapeHTML(): String;
         unescapeHTML(): String;
+        stripHTML(): String;
+        //
+        stripLetters(): String;
+        stripNumbers(): String;
+        isEmail(): Boolean;
+        isURL(): Boolean;
+        isIP(): Boolean;
+        isPhoneNumber(): Boolean;
     }
   }
   

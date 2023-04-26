@@ -77,12 +77,24 @@ String.prototype.unescapeHTML = function() {
       });
 }
 
+String.prototype.stripHTML = function() {
+    return this.replace(/(<([^>]+)>)/gi, '');
+}
 
+String.prototype.isEmail = function() {
+    return this.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/) ? true : false;
+}
+
+String.prototype.isPhoneNumber = function() {
+    return this.match(/^\d{3}-\d{3}-\d{4}$/) ? true : false;
+}
 
 //tests
+let phoneNumber = '123-456-7890';
 let testStr = 'hi my name is xyzabc123'
 let htmlStr = '<div>hi</div>'
 let testStr2 = 'racecar'
-
+let email = "eschmannTanner@gmail.com"
+console.log(email.isEmail())
 htmlStr;
 testStr;
