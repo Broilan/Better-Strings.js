@@ -10,6 +10,9 @@ String.prototype.countWords = function() {
     return this.split(" ").length;
 }
 
+String.prototype.isPalindrome = function() {
+    return this.split(' ').join('').reverse() === this.split(' ').join('');
+}
 
 
 
@@ -17,4 +20,5 @@ String.prototype.countWords = function() {
 
 //tests
 let testStr = 'hi my name is xyzabc123'
+let testStr2 = 'racecar'
 testStr;
