@@ -1,15 +1,40 @@
 {
-  "name": "better-strings",
-  "private": true,
-  "version": "0.0.0",
+  "Author": "Tanner Eschmann",
+  "name": "@broilan/better-strings",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "description": "Library of string methods",
+  "license": "MIT",
+  "main": "./dist/better-strings.umd.cjs",
+  "module": "./dist/better-strings.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/TannerEsch/better-strings.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TannerEsch/better-strings.js.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/better-strings.js",
+      "require": "./dist/better-strings.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^18.16.1",
     "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.18"
   }
 }
