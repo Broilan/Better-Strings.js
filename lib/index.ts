@@ -17,6 +17,11 @@ String.prototype.isPalindrome = function() {
     return this.split(' ').join('').reverse() === this.split(' ').join('');
 }
 
+String.prototype.isAnagram = function(str2: string) {
+    return this.split('').sort().join('') === str2.split('').sort().join('');
+}
+
+
 String.prototype.toCamelCase = function() {
     return this.split('').map((letter, i) => i !== 0 && this[i-1] === ' ' ? letter.toUpperCase() : letter).join('');
 }
@@ -116,9 +121,10 @@ String.prototype.stripSymbols = function() {
     return this.replace(/[$@%/#{}[\]\()=-*_]/g, '');
 }
 
+
+
+
 //tests
-
-
 let testStr = 'hi my name is xyzabc123'
 let htmlStr = '<div>hi</div>'
 let testStr2 = 'racecar,,,.r,,r...@@@@$%#[]{}=_'

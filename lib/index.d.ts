@@ -3,6 +3,7 @@ declare global {
         reverse(): String;
         countWords(): Number;
         isPalindrome(): Boolean;
+        isAnagram(str2: String): Boolean;
         toCamelCase(): String;
         toSnakeCase(): String;
         toKebabCase(): String;
