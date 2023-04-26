@@ -9,10 +9,10 @@
   "main": "./dist/better-strings.umd.cjs",
   "module": "./dist/better-strings.js",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/TannerEsch/better-strings.js#readme",
+  "homepage": "https://github.com/TannerEsch/better-strings#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TannerEsch/better-strings.js.git"
+    "url": "git+https://github.com/TannerEsch/better-strings.git"
   },
   "exports": {
     ".": {
