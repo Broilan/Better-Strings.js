@@ -89,12 +89,20 @@ String.prototype.isPhoneNumber = function() {
     return this.match(/^\d{3}-\d{3}-\d{4}$/) ? true : false;
 }
 
+String.prototype.isURL = function() {
+    let regex = /^(?:(?:https?|ftp):\/\/)?(?:\S+(?::\S*)?@)?(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|(?:[a-z0-9-]+\.)+[a-z]{2,})(?::\d+)?(?:\/[\w-]+)*\/?(?:\?[^\s]+)?(?:#[^\s]+)?$/i
+    return this.match(regex) ? true : false;
+}
+
+String.prototype.isIP = function() {
+    return this.match(/^(\d{1,3}\.){3}\d{1,3}$/) ? true : false;
+}
+
 //tests
-let phoneNumber = '123-456-7890';
+
+
 let testStr = 'hi my name is xyzabc123'
 let htmlStr = '<div>hi</div>'
 let testStr2 = 'racecar'
-let email = "eschmannTanner@gmail.com"
-console.log(email.isEmail())
 htmlStr;
 testStr;
