@@ -10,6 +10,8 @@ declare global {
         toTrainCase(): String;
         removeWhiteSpace(): String;
         reverseWords(): String;
+        escapeHTML(): String;
+        unescapeHTML(): String;
     }
   }
   

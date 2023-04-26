@@ -45,11 +45,44 @@ String.prototype.reverseWords = function() {
     return this.split(' ').map(word => word.split('').reverse().join('')).join(' ');
 }
 
+String.prototype.escapeHTML = function() {
+    return this.split('').map(l => {
+        switch(l) {
+            case '<':
+                return '&lt;';
+            case '>':
+                return '&gt;';
+            case '&':
+                return '&amp;';
+            case '"':
+                return '&quot;';
+            case "'":
+                return '&apos;';
+            default:
+                return l;
+        }
+    }).join('');
+}
+
+String.prototype.unescapeHTML = function() {
+    const htmlEntities: {[key: string]: string} = {
+        '&amp;': '&',
+        '&lt;': '<',
+        '&gt;': '>',
+        '&quot;': '"',
+        '&#039;': '\'',
+      };
+    return this.replace(/(&amp;|&lt;|&gt;|&quot;|&#039;)/g, function(match) {
+        return htmlEntities[match];
+      });
+}
+
 
 
 //tests
 let testStr = 'hi my name is xyzabc123'
+let htmlStr = '<div>hi</div>'
 let testStr2 = 'racecar'
 
-console.log(testStr.reverseWords());
+htmlStr;
 testStr;
