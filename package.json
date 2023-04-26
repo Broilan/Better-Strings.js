@@ -2,17 +2,17 @@
   "Author": "Tanner Eschmann",
   "name": "@broilan/better-strings",
   "private": false,
-  "version": "0.0.4",
+  "version": "1.0.8",
   "type": "module",
   "description": "Library of string methods",
   "license": "MIT",
   "main": "./dist/better-strings.umd.cjs",
   "module": "./dist/better-strings.js",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/TannerEsch/better-strings#readme",
+  "homepage": "https://github.com/TannerEsch/Better-Strings.js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TannerEsch/better-strings.git"
+    "url": "git+https://github.com/TannerEsch/Better-Strings.js"
   },
   "exports": {
     ".": {
