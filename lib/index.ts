@@ -77,9 +77,7 @@ String.prototype.unescapeHTML = function() {
       });
 }
 
-String.prototype.stripHTML = function() {
-    return this.replace(/(<([^>]+)>)/gi, '');
-}
+
 
 String.prototype.isEmail = function() {
     return this.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/) ? true : false;
@@ -98,11 +96,32 @@ String.prototype.isIP = function() {
     return this.match(/^(\d{1,3}\.){3}\d{1,3}$/) ? true : false;
 }
 
+String.prototype.stripHTML = function() {
+    return this.replace(/(<([^>]+)>)/gi, '');
+}
+
+String.prototype.stripLetters = function() {
+    return this.replace(/[a-zA-Z]/g, '');
+}
+
+String.prototype.stripNumbers = function() {
+    return this.replace(/[0-9]/g, '');
+}
+
+String.prototype.stripPunctuation = function() {
+    return this.replace(/[.,\/!?*\^&\*;:-`()]/g, '');
+}
+
+String.prototype.stripSymbols = function() {
+    return this.replace(/[$@%/#{}[\]\()=-*_]/g, '');
+}
+
 //tests
 
 
 let testStr = 'hi my name is xyzabc123'
 let htmlStr = '<div>hi</div>'
-let testStr2 = 'racecar'
+let testStr2 = 'racecar,,,.r,,r...@@@@$%#[]{}=_'
+console.log(testStr2.stripSymbols())
 htmlStr;
 testStr;

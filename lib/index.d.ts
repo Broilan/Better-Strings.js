@@ -13,9 +13,10 @@ declare global {
         escapeHTML(): String;
         unescapeHTML(): String;
         stripHTML(): String;
-        //
         stripLetters(): String;
         stripNumbers(): String;
+        stripSymbols(): String;
+        stripPunctuation(): String;
         isEmail(): Boolean;
         isURL(): Boolean;
         isIP(): Boolean;
