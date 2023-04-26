@@ -8,6 +8,8 @@ declare global {
         toKebabCase(): String;
         toPascalCase(): String;
         toTrainCase(): String;
+        removeWhiteSpace(): String;
+        reverseWords(): String;
     }
   }
   

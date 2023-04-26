@@ -37,7 +37,13 @@ String.prototype.toTrainCase = function() {
     return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('-');
 }
 
+String.prototype.removeWhiteSpace = function() {
+    return this.split(' ').join('');
+}
 
+String.prototype.reverseWords = function() {
+    return this.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
 
 
 
@@ -45,5 +51,5 @@ String.prototype.toTrainCase = function() {
 let testStr = 'hi my name is xyzabc123'
 let testStr2 = 'racecar'
 
-console.log(testStr.toKebabCase());
+console.log(testStr.reverseWords());
 testStr;
