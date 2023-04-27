@@ -1,5 +1,7 @@
 # Better-Strings.js Library
 -------------------------------------------
+## NPM: https://www.npmjs.com/package/@broilan/better-strings?activeTab=readme
+
 ## INSTALL: npm i @broilan/better-strings;
 
 ## IMPORT: import '@broilan/better-strings';
